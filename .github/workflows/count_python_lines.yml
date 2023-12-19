@@ -3,7 +3,7 @@ name: Count Python Lines of Code
 on: [push]
 
 jobs:
-  count-lines:
+  count-python-lines:
     runs-on: ubuntu-latest
 
     steps:

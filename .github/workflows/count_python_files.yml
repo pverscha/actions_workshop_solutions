@@ -3,7 +3,7 @@ name: Count Python files in repository
 on: [push]
 
 jobs:
-  count-lines:
+  count-python-files:
     runs-on: ubuntu-latest
 
     steps:
