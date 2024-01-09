@@ -1,5 +1,5 @@
-import requests
 import os
+import requests
 from config import BASE_URL
 
 def get_current_temperature(city):
@@ -12,4 +12,3 @@ def get_current_temperature(city):
     response = requests.get(BASE_URL, params=params)
     data = response.json()
     return data['current']['temp_c']
-
