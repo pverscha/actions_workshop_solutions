@@ -11,10 +11,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Install Python 3
-        run: |
-          sudo apt update
-          sudo apt install python3-pip
+      - name: Install Python
+        uses: actions/setup-python@v2
 
       - name: Install dependencies
         run: cd app && pip install -r requirements.txt
