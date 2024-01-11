@@ -24,4 +24,4 @@ jobs:
         run: cd app && pip install -r requirements.txt
 
       - name: Run app and print temperature
-        run: cd app && python3 main.py ${{ github.events.inputs.city }}
+        run: cd app && python3 main.py ${{ github.event.inputs.city }}
