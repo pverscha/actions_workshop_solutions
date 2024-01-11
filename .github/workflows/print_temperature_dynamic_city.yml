@@ -1,0 +1,27 @@
+name: Print Temperature of Dynamically Provided City
+
+on: 
+  workflow_dispatch:
+    inputs:
+      city:
+        description: 'City to print temperature of'
+        required: true
+        default: 'Brussels'
+
+jobs:
+  print_temperature:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Install Python 3
+        run: |
+          sudo apt update
+          sudo apt install python3-pip
+
+      - name: Install dependencies
+        run: cd app && pip install -r requirements.txt
+
+      - name: Run app and print temperature
+        run: cd app && python3 main.py ${{ github.events.inputs.city }}
