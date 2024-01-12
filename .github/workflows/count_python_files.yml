@@ -1,8 +1,6 @@
 name: Count Python Files in Repository
 
-# on: [push]
-on: 
-  workflow_dispatch:
+on: [push]
 
 jobs:
   count-python-files:

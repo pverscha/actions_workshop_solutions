@@ -1,8 +1,6 @@
 name: Count Python Lines of Code
 
-# on: [push]
-on: 
-  workflow_dispatch:
+on: [push]
 
 jobs:
   count-python-lines:
